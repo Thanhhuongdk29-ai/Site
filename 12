@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chúc mừng ngày 20/11</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #fff1eb, #ace0f9);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 650px;
+    padding: 45px 25px;
+    text-align: center;
+    background: rgba(255,255,255,0.85);
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+    animation: appear 1.2s ease;
+    z-index: 2;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.flower {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #e75480;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #d65a7a;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #e75480;
+    font-weight: bold;
+}
+
+button {
+    background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 5px 15px #ffb6c1;
+}
+
+#message {
+    display: none;
+    margin-top: 25px;
+    color: #d6336c;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.petal {
+    position: absolute;
+    top: -30px;
+    font-size: 22px;
+    animation: fall linear infinite;
+    z-index: 1;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+.footer {
+    margin-top: 30px;
+    color: #999;
+    font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="flower">🌸💐🌷</div>
+
+    <h1>Happy Teachers' Day!</h1>
+
+    <h2>Chúc mừng ngày Nhà giáo Việt Nam 20/11</h2>
+
+    <p>
+        Nhân ngày Nhà giáo Việt Nam 20/11,
+        em xin gửi đến quý thầy cô những lời chúc
+        tốt đẹp và chân thành nhất.
+    </p>
+
+    <p>
+        Kính chúc thầy cô luôn
+        <span class="highlight">mạnh khỏe, hạnh phúc</span>,
+        tràn đầy nhiệt huyết và luôn thành công
+        trên con đường trồng người.
+    </p>
+
+    <p>
+        Cảm ơn thầy cô đã luôn tận tâm,
+        dìu dắt và truyền đạt những kiến thức quý báu
+        cho chúng em.
+    </p>
+
+    <button onclick="showMessage()">
+        💌 Nhấn vào đây nhé!
+    </button>
+
+    <div id="message">
+        🌹 Tri ân thầy cô – Người lái đò thầm lặng! 🌹
+        <br>
+        Chúng em yêu quý và biết ơn thầy cô!
+    </div>
+
+    <div class="footer">
+        Made with ❤️ | 20 - 11
+    </div>
+
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("message").style.display = "block";
+}
+
+// Hiệu ứng hoa rơi
+const flowers = ["🌸", "🌷", "🌹", "💮", "✨"];
+
+function createPetal() {
+    const petal = document.createElement("div");
+    petal.className = "petal";
+    petal.innerHTML =
+        flowers[Math.floor(Math.random() * flowers.length)];
+
+    petal.style.left = Math.random() * 100 + "vw";
+    petal.style.animationDuration =
+        (Math.random() * 5 + 4) + "s";
+
+    document.body.appendChild(petal);
+
+    setTimeout(() => {
+        petal.remove();
+    }, 9000);
+}
+
+setInterval(createPetal, 400);
+</script>
+
+</body>
+</html>
