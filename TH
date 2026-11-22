@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile - Thanh Hương</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffd6e7, #dcd6ff);
+    padding: 20px;
+}
+
+.profile {
+    width: 350px;
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px #0002;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffc1dc;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #d65c91;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.info {
+    background: #fff1f7;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: left;
+    line-height: 2.2;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+h3 {
+    color: #d65c91;
+    margin-bottom: 10px;
+}
+
+.hobbies {
+    margin-bottom: 20px;
+}
+
+.hobbies span {
+    display: inline-block;
+    background: #ffe1ee;
+    color: #bd5682;
+    padding: 8px 12px;
+    border-radius: 20px;
+    margin: 4px;
+    font-size: 13px;
+}
+
+button {
+    border: none;
+    background: #e879a8;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #c94f86;
+    transform: scale(1.05);
+}
+
+footer {
+    color: #aaa;
+    font-size: 12px;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="profile">
+
+    <img class="avatar"
+    src="https://i.pravatar.cc/300"
+    alt="Ảnh đại diện">
+
+    <h1>Nguyễn Thị Thanh Hương</h1>
+    <p class="subtitle">✨ Welcome to my profile ✨</p>
+
+    <div class="info">
+        <h3>Thông tin cá nhân</h3>
+        <p>🎂 Ngày sinh: 11/09/2009</p>
+        <p>🎓 Lớp: 12C4</p>
+        <p>🏫 Nghề nghiệp: Học sinh</p>
+        <p>🌍 Quốc gia: Việt Nam</p>
+    </div>
+
+    <div class="hobbies">
+        <h3>💗 Sở thích</h3>
+        <span>🎧 Nghe nhạc</span>
+        <span>📸 Chụp ảnh</span>
+        <span>✈️ Du lịch</span>
+        <span>🍰 Ăn uống</span>
+    </div>
+
+    <button onclick="alert('Cảm ơn bạn đã ghé thăm Profile của Hương! 💗')">
+        Say Hello 💌
+    </button>
+
+    <footer>
+        © 2026 | Made with 💗 by Thanh Hương
+    </footer>
+
+</div>
+
+</body>
+</html>
